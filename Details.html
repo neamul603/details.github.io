@@ -7,65 +7,63 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('images/Background.JPG');
-            background-size: cover; /* Ensures the background covers the entire screen */
+            background-image: url('Background.JPG'); /* Ensure the path is correct */
+            background-size: cover; /* Adjust to 'cover' to ensure full background display */
             background-position: center; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
             margin: 0;
             padding: 20px;
             color: #fff;
-            min-height: 100vh; /* Ensures body takes at least full screen height */
-            display: flex;
-            align-items: center; /* Centers the container vertically */
-            justify-content: center; /* Centers the container horizontally */
         }
         .container {
             width: 90%;
             max-width: 400px;
-            background-color: rgba(0, 0, 0, 0.6); /* More transparent background */
+            background-color: rgba(0, 0, 0, 0.3);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin: 100px auto;
         }
         h1 {
             color: #fff;
             text-align: center;
-            font-size: 1.5em; /* Adjust heading size for readability on smaller screens */
+            font-size: 24px;
         }
         .links {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
-            align-items: stretch;
+            align-items: flex-start;
         }
         .links a {
             display: block;
-            padding: 12px 10px;
+            padding: 10px;
             margin-bottom: 10px;
             background-color: rgba(0, 123, 255, 0.1);
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
+            text-align: left;
             width: 100%;
             border: 1px solid rgba(0, 123, 255, 0.5);
-            transition: background-color 0.3s; /* Smooth transition for hover effects */
+            font-size: 14px;
         }
         .links a:hover {
-            background-color: rgba(0, 123, 255, 0); /* Maintain transparency on hover */
+            background-color: rgba(0, 123, 255, 0);
         }
+        /* Mobile-specific styles */
         @media (max-width: 600px) {
             .container {
-                padding: 15px; /* Reduce padding for smaller screens */
-                margin: 10px; /* Reduce margins on smaller screens */
-                max-width: 90%; /* Allow the container to take more space on small screens */
+                padding: 15px;
+                margin: 50px auto;
             }
             h1 {
-                font-size: 1.3em; /* Adjust font size for smaller screens */
+                font-size: 20px;
             }
             .links a {
-                padding: 10px; /* Adjust padding to make links easier to tap */
+                padding: 8px;
+                font-size: 13px;
             }
         }
     </style>
@@ -74,10 +72,10 @@
     <div class="container">
         <h1>Neamul Hossain Sabab</h1>
         <div class="links">
-            <a href="https://drive.google.com/file/d/1r9vbM_QtE2x7EU99YdPuKHo0zVhAlSZU/view?usp=sharing">Biodata</a>
-            <a href="https://drive.google.com/file/d/1Ea8u_dkvSwLOZn6Oqo-sddxQ2T5nmatU/view?usp=sharing">CV</a>
-            <a href="https://www.facebook.com/profile.php?id=100008512232063" target="_blank">Facebook Profile</a>
-            <a href="https://www.linkedin.com/in/neamul-hossain/" target="_blank">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1r9vbM_QtE2x7EU99YdPuKHo0zVhAlSZU/view?usp=sharing" target="_blank" aria-label="Biodata PDF">Biodata</a>
+            <a href="https://drive.google.com/file/d/1Ea8u_dkvSwLOZn6Oqo-sddxQ2T5nmatU/view?usp=sharing" target="_blank" aria-label="CV PDF">CV</a>
+            <a href="https://www.facebook.com/profile.php?id=100008512232063" target="_blank" aria-label="Facebook Profile">Facebook Profile</a>
+            <a href="https://www.linkedin.com/in/neamul-hossain/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
         </div>
     </div>
 </body>
