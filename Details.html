@@ -7,67 +7,65 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('images/Background.JPG'); 
-            background-size: cover; /* Ensures the background covers the screen */
+            background-image: url('images/Background.JPG');
+            background-size: cover; /* Ensures the background covers the entire screen */
             background-position: center; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
             margin: 0;
             padding: 20px;
             color: #fff;
+            min-height: 100vh; /* Ensures body takes at least full screen height */
+            display: flex;
+            align-items: center; /* Centers the container vertically */
+            justify-content: center; /* Centers the container horizontally */
         }
         .container {
             width: 90%;
             max-width: 400px;
-            background-color: rgba(0, 0, 0, 0.3); /* More transparent background */
+            background-color: rgba(0, 0, 0, 0.6); /* More transparent background */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            margin: 10vh auto; /* Center vertically and horizontally */
-            box-sizing: border-box; /* Includes padding in the element’s total width and height */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
         }
         h1 {
             color: #fff;
             text-align: center;
-            font-size: 1.5em; /* Adjust heading size for mobile */
+            font-size: 1.5em; /* Adjust heading size for readability on smaller screens */
         }
         .links {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
-            align-items: stretch; /* Aligns items to fill container */
+            align-items: stretch;
         }
         .links a {
             display: block;
-            padding: 12px 10px; /* Slightly increase padding for touch targets */
+            padding: 12px 10px;
             margin-bottom: 10px;
-            background-color: rgba(0, 123, 255, 0.1); /* Completely transparent background */
+            background-color: rgba(0, 123, 255, 0.1);
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
-            text-align: left;
             width: 100%;
-            border: 1px solid rgba(0, 123, 255, 0.5); /* Optional: border with some color for visibility */
+            border: 1px solid rgba(0, 123, 255, 0.5);
             transition: background-color 0.3s; /* Smooth transition for hover effects */
         }
         .links a:hover {
-            background-color: rgba(0, 123, 255, 0); /* Keep the hover state fully transparent */
+            background-color: rgba(0, 123, 255, 0); /* Maintain transparency on hover */
         }
         @media (max-width: 600px) {
-            body {
-                padding: 10px; /* Reduce padding for smaller screens */
-                background-size: auto; /* Adjust background size for mobile screens */
-            }
             .container {
-                padding: 15px; /* Smaller padding for mobile */
-                margin: 20px auto; /* Adjust margin for mobile */
-                max-width: 100%; /* Allow container to stretch full width on mobile */
+                padding: 15px; /* Reduce padding for smaller screens */
+                margin: 10px; /* Reduce margins on smaller screens */
+                max-width: 90%; /* Allow the container to take more space on small screens */
+            }
+            h1 {
+                font-size: 1.3em; /* Adjust font size for smaller screens */
             }
             .links a {
                 padding: 10px; /* Adjust padding to make links easier to tap */
-            }
-            h1 {
-                font-size: 1.2em; /* Further reduce font size for smaller screens */
             }
         }
     </style>
